@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  l_hit: 0
 --- !u!50 &96970827
 Rigidbody2D:
   serializedVersion: 4
@@ -883,7 +884,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cbbed799f2cfe458b588138ee207b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 2028627107}
+  ball: {fileID: 96970826}
+  Missestext: {fileID: 0}
+  HitscoreText: {fileID: 2028627107}
+  trialNum: 0
+  trialName: 
+  trials: []
+  winningScore: 0
 --- !u!4 &1118663075
 Transform:
   m_ObjectHideFlags: 0
@@ -1491,7 +1498,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cbbed799f2cfe458b588138ee207b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  ball: {fileID: 0}
+  Missestext: {fileID: 0}
+  HitscoreText: {fileID: 0}
+  trialNum: 0
+  trialName: 
+  trials: []
+  winningScore: 0
 --- !u!1 &2103545407
 GameObject:
   m_ObjectHideFlags: 0

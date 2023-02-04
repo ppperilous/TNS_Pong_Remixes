@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Ball : MonoBehaviour {
     public float speed = 30;
+    public float l_hit = 0;
 
     void Start() {
         // Initial Velocity
