@@ -10,17 +10,18 @@ public class GameManager : MonoBehaviour
 {
     public Ball ball;
 
-    public Text Missestext;
+   // public Text MissesText;
+   // public Text HitsText;
 
     private int _playerScore;
-    private int _computerScore;
+    private int _MissesScore;
 
-    private int score;
     public TextMeshProUGUI HitscoreText;
+    public TextMeshProUGUI MissScoreText;
 
-    public int trialNum;
-    public string trialName;
-    public List<string> trials;
+    // public int trialNum;
+    //  public string trialName;
+    // public List<string> trials;
     public int winningScore;
 
 
@@ -28,11 +29,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        _playerScore = 0;
-        HitUpdateScore(0);
-        trialNum = GlobalControl.Instance.trialNum;
-        trialName = GlobalControl.Instance.trialName;
-        trials = GlobalControl.Instance.trials;
+       
+      //  trialNum = GlobalControl.Instance.trialNum;
+      //  trialName = GlobalControl.Instance.trialName;
+      //  trials = GlobalControl.Instance.trials;
 
     }
 
@@ -42,10 +42,28 @@ public class GameManager : MonoBehaviour
     {
         
     }
-        void HitUpdateScore(int scoreToAdd)
-    {
+    public void HitUpdateScore(int scoreToAdd){
         _playerScore += scoreToAdd;
         HitscoreText.text = "Hits: " + _playerScore;
  
     }
-}
+
+   public void MissUpdateScore()
+    {
+        _MissesScore++;
+        this.MissScoreText.text = "Miss: " + _MissesScore.ToString();
+        ResetRound();
+    }
+
+    private void ResetRound()
+    {
+        if (_playerScore == 3)
+        {
+            //newTrial();
+            this.ball.ResetPosition(); //ball should stop moving once game is over
+        }
+    }
+
+
+    }
+

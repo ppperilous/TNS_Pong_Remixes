@@ -10,6 +10,12 @@ public class Ball : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
       
     }
+    public void ResetPosition()
+    {
+        this.GetComponent<Rigidbody>().velocity = Vector2.zero;
+        this.GetComponent<Rigidbody>().position = Vector2.zero;
+    }
+
     float hitFactor(Vector2 ballPos, Vector2 racketPos,
                     float racketHeight) {
         // ascii art:
