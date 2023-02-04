@@ -1,13 +1,40 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 public class Ball : MonoBehaviour {
-    public float speed = 30;
+
+    public float speed = 8;
+
+    //Create a stop watch
+    Stopwatch sw = new Stopwatch();
+
+    //Number of ms before speed is incremented
+    public float period = 5000;
+
+    //Stores current ms since last speed update
+    float currentMs = 0;
 
     void Start() {
         // Initial Velocity
         GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+
+        //Start stopwatch
+        sw.Start();
+    }
+
+    void Update()
+    {
+        //increments speed at the set period
+        float ms = sw.ElapsedMilliseconds;
+        if (ms - currentMs > period)
+        {
+            speed++;
+            currentMs = ms;
         }
+    }
+
     float hitFactor(Vector2 ballPos, Vector2 racketPos,
                     float racketHeight) {
         // ascii art:
@@ -38,7 +65,7 @@ public class Ball : MonoBehaviour {
 
         // Set Velocity with dir * speed
         GetComponent<Rigidbody2D>().velocity = dir * speed;
-    }
+        }
 
     // Hit the right Racket?
     if (col.gameObject.name == "RacketRight") {
@@ -52,6 +79,6 @@ public class Ball : MonoBehaviour {
 
         // Set Velocity with dir * speed
         GetComponent<Rigidbody2D>().velocity = dir * speed;
+        }
     }
-}
 }
