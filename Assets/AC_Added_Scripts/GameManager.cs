@@ -42,10 +42,10 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void HitUpdateScore(int scoreToAdd){
-        _playerScore += scoreToAdd;
-        HitscoreText.text = "Hits: " + _playerScore;
- 
+    public void HitUpdateScore(){
+        _playerScore++;
+       this.HitscoreText.text = "Hit: " + _playerScore.ToString();
+        Debug.Log("Hits #: " + _playerScore);
     }
 
    public void MissUpdateScore()
