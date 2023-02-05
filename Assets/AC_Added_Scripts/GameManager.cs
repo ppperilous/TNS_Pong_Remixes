@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("EndScene");
             //newTrial();
-            this.ball.ResetPosition(); //ball should stop moving once game is over
+            
         }
     }
 
