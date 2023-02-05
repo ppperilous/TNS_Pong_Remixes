@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI HitscoreText;
     public TextMeshProUGUI MissScoreText;
-   
+    public Timer timeRemaining;
 
     // public int trialNum;
     //  public string trialName;
@@ -30,11 +30,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-       
-      //  trialNum = GlobalControl.Instance.trialNum;
-      //  trialName = GlobalControl.Instance.trialName;
-      //  trials = GlobalControl.Instance.trials;
 
+        //  trialNum = GlobalControl.Instance.trialNum;
+        //  trialName = GlobalControl.Instance.trialName;
+        //  trials = GlobalControl.Instance.trials;
+        timeRemaining = GameObject.Find("Timer").GetComponent<Timer>();
+   
     }
 
 
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour
     public void HitUpdateScore(){
         _playerScore++;
        this.HitscoreText.text = "Hit: " + _playerScore.ToString();
-        Debug.Log("Hits #: " + _playerScore);
+        Debug.Log("Hits #: " + _playerScore + "/30");
         ResetRound();
     }
 
@@ -58,9 +59,8 @@ public class GameManager : MonoBehaviour
         ResetRound();
     }
 
-    private void ResetRound()
-    {
-        if (_playerScore == 3)
+    public void ResetRound(){
+        if (_playerScore == 3 || timeRemaining.timeRemaining == 0)
         {
             SceneManager.LoadScene("EndScene");
             //newTrial();

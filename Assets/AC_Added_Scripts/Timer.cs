@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+
+
 public class Timer : MonoBehaviour
 {
     public float timeRemaining = 50;
     public bool timerIsRunning = false;
     public TextMeshProUGUI TimeLeft;
-    private void Start()
+    public GameManager ResetRound;
+       private void Start()
     {
         // Starts the timer automatically
         timerIsRunning = true;
+        ResetRound = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
     void Update()
     {
@@ -27,6 +31,7 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                ResetRound.ResetRound();
             }
         }
     }
