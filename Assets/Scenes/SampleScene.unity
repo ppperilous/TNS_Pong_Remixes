@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  period: 5000
+  period: 4000
 --- !u!50 &96970827
 Rigidbody2D:
   serializedVersion: 4
