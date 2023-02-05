@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         _MissesScore++;
         this.MissScoreText.text = "Miss: " + _MissesScore.ToString();
-        ResetRound();
+        Debug.Log("Miss #: " + _MissesScore);
     }
 
     private void ResetRound()
