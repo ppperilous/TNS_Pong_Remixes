@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI HitscoreText;
     public TextMeshProUGUI MissScoreText;
+   
 
     // public int trialNum;
     //  public string trialName;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         _playerScore++;
        this.HitscoreText.text = "Hit: " + _playerScore.ToString();
         Debug.Log("Hits #: " + _playerScore);
+        ResetRound();
     }
 
    public void MissUpdateScore()
@@ -53,12 +55,14 @@ public class GameManager : MonoBehaviour
         _MissesScore++;
         this.MissScoreText.text = "Miss: " + _MissesScore.ToString();
         Debug.Log("Miss #: " + _MissesScore);
+        ResetRound();
     }
 
     private void ResetRound()
     {
         if (_playerScore == 3)
         {
+            SceneManager.LoadScene("EndScene");
             //newTrial();
             this.ball.ResetPosition(); //ball should stop moving once game is over
         }
