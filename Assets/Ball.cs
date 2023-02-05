@@ -22,18 +22,17 @@ public class Ball : MonoBehaviour {
     float currentMs = 0;
 
     void Start() {
+        RacketLeft = GameObject.Find("RacketLeft");
+        RacketRight = GameObject.Find("RacketRight");
+
+        //Stop movement of Left Racket (as ball moves to the right
+        RacketLeft.SendMessage("stopRacket");
+
         // Initial Velocity of Ball
         GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
 
         //Start stopwatch
         sw.Start();
-
-        RacketLeft = GameObject.Find("RacketLeft");
-        RacketRight = GameObject.Find("RacketRight");
-
-        //RacketLeft.SetActive(false);
-        RacketLeft.SendMessage("stopRacket");
-        
     }
 
     void Update()
@@ -79,8 +78,6 @@ public class Ball : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = dir * speed;
 
          //Deactivate left racket, activate right racket
-         //RacketLeft.SetActive(false);
-         //RacketRight.SetActive(true);
          RacketLeft.SendMessage("stopRacket");
          RacketRight.SendMessage("startRacket");
      }
@@ -99,8 +96,6 @@ public class Ball : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = dir * speed;
 
          //Deactivate right racket, activate right racket
-         //RacketLeft.SetActive(true);
-         //RacketRight.SetActive(false);
          RacketLeft.SendMessage("startRacket");
          RacketRight.SendMessage("stopRacket");
      }
@@ -118,8 +113,6 @@ public class Ball : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
 
             //Deactivate left racket, activate right racket
-            //RacketLeft.SetActive(false);
-            //RacketRight.SetActive(true);
             RacketLeft.SendMessage("stopRacket");
             RacketRight.SendMessage("startRacket");
 
@@ -141,8 +134,6 @@ public class Ball : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
 
             //Deactivate right racket, activate right racket
-            //RacketLeft.SetActive(true);
-            //RacketRight.SetActive(false);
             RacketLeft.SendMessage("startRacket");
             RacketRight.SendMessage("stopRacket");
 
