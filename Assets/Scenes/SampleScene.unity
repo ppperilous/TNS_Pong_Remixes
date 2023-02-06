@@ -3385,6 +3385,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3109038431110134209, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 173
+      objectReference: {fileID: 0}
     - target: {fileID: 3109038431886440033, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3472,6 +3476,42 @@ PrefabInstance:
     - target: {fileID: 3109038431886440037, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
       propertyPath: m_Name
       value: Canvas-StartScreen-upDownPong
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109038432756723626, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 117
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109038432756723626, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109038432756723627, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109038432756723627, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127286645976210466, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127286645976210466, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986026672208385806, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986026672208385806, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_margin.z
+      value: -141.81595
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986026672208385806, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dc55c38bbea14285b1e6730d0b855a5, type: 3}
