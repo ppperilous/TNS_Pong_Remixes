@@ -23,9 +23,9 @@ public class DontDestroyLoad : MonoBehaviour
 
     void Start()
     {
-        this.Final_Hits.text = "Hist: " + HitScore;
-        this.Final_Misses.text = "Misses: " + MissScore;
-        this.Final_Time.text = "Time Remaining: " + ApplicationData.EndTime.text;
+        this.Final_Hits.text = "" + HitScore;
+        this.Final_Misses.text = "" + MissScore;
+     //   this.Final_Time.text = ApplicationData.EndTime.text;
 
     }
 
