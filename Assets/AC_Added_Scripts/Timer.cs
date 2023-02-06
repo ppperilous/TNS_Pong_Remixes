@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     public bool timerIsRunning = false;
     public TextMeshProUGUI TimeLeft;
     public GameManager ResetRound;
+    public float currentTime;
        private void Start()
     {
         // Starts the timer automatically
@@ -36,7 +37,7 @@ public class Timer : MonoBehaviour
             }
         }
     }
-    void DisplayTime(float timeToDisplay)
+    public void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
