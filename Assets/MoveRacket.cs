@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveRacket : MonoBehaviour
 {  
     public float speed = 0;
-    public float maxSpeed = 30;
+    public float maxSpeed = 40;
     public string axis = "Vertical";
 
     GameObject highlight;
@@ -70,8 +70,6 @@ public class MoveRacket : MonoBehaviour
                 if (speed < maxSpeed) speed += accFactor;
                 GetComponent<Rigidbody2D>().velocity = new Vector2(0, v) * speed;
             }
-
-
         }
         else if (!racketState)
         {
