@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
     {
         // Starts the timer automatically
         timerIsRunning = true;
+        // Grab access to GameManager in order to call ResetRound() function
         ResetRound = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
     void Update()
