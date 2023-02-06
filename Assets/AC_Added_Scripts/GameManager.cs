@@ -19,13 +19,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
     //Get time remaining value from timer script
-        timeRemaining = GameObject.Find("Timer").GetComponent<Timer>();
+       //timeRemaining = GameObject.Find("Timer").GetComponent<Timer>();
    
     }
     void Update() {
-        if (Input.GetKeyDown("0"))
-
-            SceneManager.LoadScene("EndScene");
+        
     }
    
     //When ball hits RACKET update Hit text and check if endgame condition met
@@ -50,8 +48,9 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("EndScene");
             ApplicationData.FinalScore = _playerScore;
             ApplicationData.MissScore = _MissesScore;
-            ApplicationData.TimeRemaining = timeRemaining.timeRemaining;
+           // ApplicationData.TimeRemaining = timeRemaining.timeRemaining;
             Debug.Log("final hits: " + ApplicationData.FinalScore);
+
            
 
         }
