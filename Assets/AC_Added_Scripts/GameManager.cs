@@ -41,14 +41,25 @@ public class GameManager : MonoBehaviour
     }
     //Check and see if endgame conditions have been met
     public void ResetRound(){
-        if (_playerScore == 3 || timeRemaining.timeRemaining == 0)
+        if (_playerScore == 30 || timeRemaining.timeRemaining == 0 || _MissesScore == 30)
         {
             SceneManager.LoadScene("EndScene");
-            //newTrial();
-            
+            ApplicationData.FinalScore = _playerScore;
+            ApplicationData.MissScore = _MissesScore;
+            ApplicationData.TimeRemaining = timeRemaining.timeRemaining;
+            Debug.Log("final hits: " + ApplicationData.FinalScore);
+           
+
         }
     }
+   
 
+}
 
-    }
+public static class ApplicationData
+{
+    public static float FinalScore;
+    public static float MissScore;
+    public static float TimeRemaining;
 
+}

@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f74082cea91987429a426f742f771f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 30
+  timeRemaining: 300
   timerIsRunning: 1
   TimeLeft: {fileID: 972131035}
   ResetRound: {fileID: 0}
@@ -4403,6 +4403,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5058765504962721567, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
+      propertyPath: m_margin.w
+      value: -24.360313
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237949593177752880, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237949593177752880, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560202519326377973, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
+      propertyPath: m_Name
+      value: End_Misses
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560202519326377975, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
+      propertyPath: m_text
+      value: Misses
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560202519942861089, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
+      propertyPath: m_Name
+      value: End_Hits
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560202519942861091, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560202520112774345, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7560202520112774347, guid: 86e8ce2a1908ed540b310d8d7bf1221c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
