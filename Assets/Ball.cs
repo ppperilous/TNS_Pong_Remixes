@@ -118,7 +118,7 @@ public class Ball : MonoBehaviour {
 
             //Update Score?
 
-        }
+    }
 
     //Hit the right wall?
     if (col.gameObject.name == "WallRight")
