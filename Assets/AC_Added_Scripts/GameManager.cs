@@ -13,17 +13,27 @@ public class GameManager : MonoBehaviour
     private int _MissesScore;
     public TextMeshProUGUI HitscoreText;
     public TextMeshProUGUI MissScoreText;
-    public Timer timeRemaining;
     public int winningScore;
+    public Timer timeRemaining;
+    public Timer timeinPlace;
 
     void Start()
     {
-    //Get time remaining value from timer script
-       //timeRemaining = GameObject.Find("Timer").GetComponent<Timer>();
-   
+        //Get time remaining value from timer script
+        timeinPlace = GameObject.Find("Timer").GetComponent<Timer>();
+
     }
-    void Update() {}
-   
+    void Update() {
+
+        if (Input.GetKeyDown("0"))
+        {
+            SceneManager.LoadScene("EndScene");
+            ApplicationData.FinalScore = _playerScore;
+            ApplicationData.MissScore = _MissesScore;
+            ApplicationData.EndTime.text = "Time: " + timeinPlace.timeRemaining;
+        }
+    }
+    
     //When ball hits RACKET update Hit text and check if endgame condition met
     public void HitUpdateScore(){
         _playerScore++;
@@ -41,12 +51,12 @@ public class GameManager : MonoBehaviour
     }
     //Check and see if endgame conditions have been met
     public void ResetRound(){
-        if (_playerScore == 30 || timeRemaining.timeRemaining == 0 || _MissesScore == 30)
+        if (_playerScore == 30 || timeinPlace.timeRemaining == 0 || _MissesScore == 30)
         {
             SceneManager.LoadScene("EndScene");
             ApplicationData.FinalScore = _playerScore;
             ApplicationData.MissScore = _MissesScore;
-           // ApplicationData.TimeRemaining = timeRemaining.timeRemaining;
+            ApplicationData.EndTime.text = "Time: " + timeinPlace.timeRemaining;
             Debug.Log("final hits: " + ApplicationData.FinalScore);
 
            
@@ -61,6 +71,6 @@ public static class ApplicationData
 {
     public static float FinalScore;
     public static float MissScore;
-    public static float TimeRemaining;
+    public static TextMeshProUGUI EndTime;
 
 }
