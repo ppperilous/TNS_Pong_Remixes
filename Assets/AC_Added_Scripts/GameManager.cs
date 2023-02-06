@@ -22,9 +22,7 @@ public class GameManager : MonoBehaviour
        //timeRemaining = GameObject.Find("Timer").GetComponent<Timer>();
    
     }
-    void Update() {
-        
-    }
+    void Update() {}
    
     //When ball hits RACKET update Hit text and check if endgame condition met
     public void HitUpdateScore(){
