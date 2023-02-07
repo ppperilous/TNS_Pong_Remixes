@@ -1448,6 +1448,7 @@ GameObject:
   - component: {fileID: 938819515}
   - component: {fileID: 938819514}
   - component: {fileID: 938819519}
+  - component: {fileID: 938819520}
   m_Layer: 0
   m_Name: RacketRight
   m_TagString: Untagged
@@ -1462,7 +1463,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938819513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6ccd389fb8d9514d9cbf3e5aa4060c0, type: 3}
   m_Name: 
@@ -1614,6 +1615,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &938819520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938819513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0e9605f8660b7439c18e49c8f8f936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  maxSpeed: 40
+  axis: Vertical2
 --- !u!1 &1095422427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +1995,7 @@ GameObject:
   - component: {fileID: 1619500821}
   - component: {fileID: 1619500825}
   - component: {fileID: 1619500820}
+  - component: {fileID: 1619500826}
   m_Layer: 0
   m_Name: RacketLeft
   m_TagString: Untagged
@@ -1993,7 +2010,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619500819}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6ccd389fb8d9514d9cbf3e5aa4060c0, type: 3}
   m_Name: 
@@ -2145,6 +2162,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1619500826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619500819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0e9605f8660b7439c18e49c8f8f936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  maxSpeed: 40
+  axis: Vertical
 --- !u!1 &1630432585
 GameObject:
   m_ObjectHideFlags: 0
