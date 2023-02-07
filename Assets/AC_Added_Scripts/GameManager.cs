@@ -14,13 +14,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI HitscoreText;
     public TextMeshProUGUI MissScoreText;
     public int winningScore;
-    public Timer timeRemaining;
-    public Timer timeinPlace;
+    private float timeinPlace;
+    
+    
 
     void Start()
     {
         //Get time remaining value from timer script
-        timeinPlace = GameObject.Find("Timer").GetComponent<Timer>();
+       // timeinPlace = GameObject.Find("TimeKeeper").GetComponent<Timer>;
+
 
     }
     void Update() {
@@ -30,16 +32,18 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("EndScene");
             ApplicationData.FinalScore = _playerScore;
             ApplicationData.MissScore = _MissesScore;
-            ApplicationData.EndTime.text = "Time: " + timeinPlace.timeRemaining;
+            ApplicationData.EndTime = Timer.currentTime;
         }
     }
+ 
     
     //When ball hits RACKET update Hit text and check if endgame condition met
     public void HitUpdateScore(){
         _playerScore++;
        this.HitscoreText.text = "Hit: " + _playerScore.ToString();
         Debug.Log("Hits #: " + _playerScore + "/30");
-        ResetRound();
+        Debug.Log("Time now? " + Timer.currentTime);
+        //ResetRound();
     }
 
     //When ball hits WALL update Hit text and check if endgame condition met
@@ -51,12 +55,12 @@ public class GameManager : MonoBehaviour
     }
     //Check and see if endgame conditions have been met
     public void ResetRound(){
-        if (_playerScore == 30 || timeinPlace.timeRemaining == 0 || _MissesScore == 30)
+        if (_playerScore == 30 || timeinPlace == 0 || _MissesScore == 30)
         {
             SceneManager.LoadScene("EndScene");
             ApplicationData.FinalScore = _playerScore;
             ApplicationData.MissScore = _MissesScore;
-            ApplicationData.EndTime.text = "Time: " + timeinPlace.timeRemaining;
+         //   ApplicationData.EndTime.text = "" + timeinPlace;
             Debug.Log("final hits: " + ApplicationData.FinalScore);
 
            
@@ -71,6 +75,6 @@ public static class ApplicationData
 {
     public static float FinalScore;
     public static float MissScore;
-    public static TextMeshProUGUI EndTime;
+    public static float EndTime;
 
 }
