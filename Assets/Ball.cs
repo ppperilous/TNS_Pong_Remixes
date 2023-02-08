@@ -16,7 +16,7 @@ public class Ball : MonoBehaviour {
     Stopwatch sw = new Stopwatch();
 
     //Number of ms before speed is incremented
-    public float period = 4000;
+    public float period = 3000;
 
     //Stores current ms since last speed update
     float currentMs = 0;
@@ -26,7 +26,7 @@ public class Ball : MonoBehaviour {
         RacketRight = GameObject.Find("RacketRight");
 
         //Stop movement of Left Racket (as ball moves to the right
-        RacketLeft.SendMessage("stopRacket");
+      //  RacketLeft.SendMessage("stopRacket");
 
         // Initial Velocity of Ball
         GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;

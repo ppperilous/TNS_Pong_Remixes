@@ -35,14 +35,14 @@ public class LR_MoveRacket : MonoBehaviour
         //SET FEEDBACK ARROWS 
         if ((v < 0) && (racketState))
         {
-            downArrow.SetActive(false);
+            downArrow.SetActive(true);
             upArrow.SetActive(false);
 
         }
         else if ((v > 0) && (racketState))
         {
             downArrow.SetActive(false);
-            upArrow.SetActive(false);
+            upArrow.SetActive(true);
 
         }
         else
