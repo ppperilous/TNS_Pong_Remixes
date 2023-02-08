@@ -15,25 +15,20 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI MissScoreText;
     public int winningScore;
     private float timeinPlace;
+    public Timer currentTime;
     
     
 
     void Start()
     {
         //Get time remaining value from timer script
-       // timeinPlace = GameObject.Find("TimeKeeper").GetComponent<Timer>;
+      //  timeinPlace = GameObject.("TimeKeeper").GetComponent<Timer>();
 
 
     }
     void Update() {
 
-        if (Input.GetKeyDown("0"))
-        {
-            SceneManager.LoadScene("EndScene");
-            ApplicationData.FinalScore = _playerScore;
-            ApplicationData.MissScore = _MissesScore;
-            ApplicationData.EndTime = Timer.currentTime;
-        }
+      
     }
  
     
@@ -43,7 +38,7 @@ public class GameManager : MonoBehaviour
        this.HitscoreText.text = "Hit: " + _playerScore.ToString();
         Debug.Log("Hits #: " + _playerScore + "/30");
         Debug.Log("Time now? " + Timer.currentTime);
-        //ResetRound();
+        ResetRound();
     }
 
     //When ball hits WALL update Hit text and check if endgame condition met
@@ -51,19 +46,18 @@ public class GameManager : MonoBehaviour
         _MissesScore++;
         this.MissScoreText.text = "Miss: " + _MissesScore.ToString();
         Debug.Log("Miss #: " + _MissesScore);
-       // ResetRound();
+        // ResetRound();
     }
     //Check and see if endgame conditions have been met
     public void ResetRound(){
-        if (_playerScore == 30 || timeinPlace == 0 || _MissesScore == 30)
+
+        if (_playerScore == winningScore || Timer.currentTime <= 0 )
         {
-            SceneManager.LoadScene("EndScene");
             ApplicationData.FinalScore = _playerScore;
             ApplicationData.MissScore = _MissesScore;
-         //   ApplicationData.EndTime.text = "" + timeinPlace;
-            Debug.Log("final hits: " + ApplicationData.FinalScore);
-
-           
+            ApplicationData.EndTime = Timer.currentTime;
+            SceneManager.LoadScene("EndScene");
+            Debug.Log("final hits: " + ApplicationData.FinalScore);           
 
         }
     }

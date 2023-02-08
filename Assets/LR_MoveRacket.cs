@@ -24,8 +24,8 @@ public class LR_MoveRacket : MonoBehaviour
         upArrow = transform.GetChild(1).gameObject;
         downArrow = transform.GetChild(2).gameObject;
 
-        downArrow.SetActive(true);
-        upArrow.SetActive(true);
+        downArrow.SetActive(false);
+        upArrow.SetActive(false);
     }
 
     void FixedUpdate()
@@ -35,20 +35,20 @@ public class LR_MoveRacket : MonoBehaviour
         //SET FEEDBACK ARROWS 
         if ((v < 0) && (racketState))
         {
-            downArrow.SetActive(true);
-            upArrow.SetActive(true);
+            downArrow.SetActive(false);
+            upArrow.SetActive(false);
 
         }
         else if ((v > 0) && (racketState))
         {
-            downArrow.SetActive(true);
-            upArrow.SetActive(true);
+            downArrow.SetActive(false);
+            upArrow.SetActive(false);
 
         }
         else
         {
-            downArrow.SetActive(true);
-            upArrow.SetActive(true);
+            downArrow.SetActive(false);
+            upArrow.SetActive(false);
         }
 
 
@@ -93,8 +93,8 @@ public class LR_MoveRacket : MonoBehaviour
 
     void stopRacket()
     {
-        highlight.SetActive(false);
-        racketState = false;
+        highlight.SetActive(true);
+        racketState = true;
 
     }
 
