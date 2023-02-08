@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  period: 4000
+  period: 2000
 --- !u!50 &96970827
 Rigidbody2D:
   serializedVersion: 4
@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  maxSpeed: 40
+  maxSpeed: 35
   axis: Vertical2
 --- !u!50 &938819515
 Rigidbody2D:
@@ -2000,7 +2000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  maxSpeed: 40
+  maxSpeed: 35
   axis: Vertical
 --- !u!50 &1619500821
 Rigidbody2D:

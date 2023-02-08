@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479747ca936d07f46884c36cbddad00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToGoTo: LeftRight_GameScene
 --- !u!4 &271308019
 Transform:
   m_ObjectHideFlags: 0
@@ -257,6 +258,10 @@ PrefabInstance:
     - target: {fileID: 4812570580634693105, guid: 3731a56ae66b7e34fbaba76c4be4104a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812570580634693107, guid: 3731a56ae66b7e34fbaba76c4be4104a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4812570580634693109, guid: 3731a56ae66b7e34fbaba76c4be4104a, type: 3}
       propertyPath: m_Name
